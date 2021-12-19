@@ -1,0 +1,231 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
+
+  <body>
+    <p>Далеко-далеко за словесными горами в стране, гласных и согласных....</p>
+
+    <img src="images/dest/image.jpg" alt="Alt" />
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <section id="promo" class="promo">
+        <div class="page-container">
+            <div class="header-wrapper">
+                <div class="header_logo__wrapper">
+                    <img src="img/logo.png" onclick="changePromoColor()" alt="Лого">
+                </div>
+            </div>
+
+            <div class="promo-content-wrapper">
+                <div class="promo_info">
+                        <h2 id="promo-text1" onmouseover="colorPromoText1()">С помощью нас</h2>
+                        <h2 id="promo-text2" onmouseover="colorPromoText2()">вы сможете создать то, о чем</h2>
+                        <h1 id="promo-text3" onmouseover="colorPromoText3()">желаете!</h1>
+
+                    <p>
+                        Наши возможности + опыт позволят Вам достичь огромного успеха.
+                        Мы верим в вас! И знаем это на все 100%. Вас не остановить!
+                    </p>
+    
+                    <a href="#" id="promo_button" class="promo_button">
+                        Узнать больше...
+                    </a>
+                </div>
+                <div class="animated animate__backInRight promo_image__wrapper" onclick="displaySummary()">
+                    <img src="img/header-img.png" alt="Ваш телефон - наше приложение">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="animation" class="animation">
+        <div class="animation_text__wrapper">
+            <div class="animated pulse infinite animation_text">
+                Вы сможете это!
+            </div>
+        </div>
+        <div class="close__wrapper">
+            <img src="img/up-arrow.png" alt="Закрыть" id="close" class="close">
+        </div>
+    </section>
+    
+    <section class="necessary">
+        <!-- <div class="running-line"></div> -->
+        <div class="page-container">
+            <div class="necessary_title">Что вам необходимо?</div>
+
+            <div class="necessary_points">
+
+                <div class="necessary_point">
+                    <div class="point_image-wrapper">
+                        <img src="img/f3.png" alt="Первый пункт">
+                    </div>
+                    <div class="point_title">Первый блок</div>
+                    <div class="point_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+
+                <div class="necessary_point">
+                    <div class="point_image-wrapper">
+                        <img src="img/f4.png" alt="Второй пункт">
+                    </div>
+                    <div class="point_title">Второй блок</div>
+                    <div class="point_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+
+                <div class="necessary_point">
+                    <div class="point_image-wrapper">
+                        <img src="img/f5.png" alt="Третий пункт">
+                    </div>
+                    <div class="point_title">Третий блок</div>
+                    <div class="point_descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="productform">
+        <div class="productform_title">
+            Форма заказа одежды
+        </div>
+
+        <div id="productform_order" class="productform_order">
+            <div class="myform__wrapper">
+
+                <div class="myform_title">
+                    Ваши данные
+                </div>
+
+                <form action="#" class="myform">
+                    <div class="myform__input_group">
+                        <fieldset><legend>Имя</legend><input id="name" onblur="valName()" type="text" class="myform_input" placeholder="Введите свое имя" required></fieldset>
+                        <div id="name-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Фамилия</legend><input id="lname" onblur="valLname()" type="text" class="myform_input" placeholder="Введите свою фамилию" required></fieldset>
+                        <div id="lname-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Почта</legend><input id="email" onblur="valEmail()" type="email" class="myform_input" placeholder="Введите свой e-mail" required></fieldset>
+                        <div id="email-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Номер телефона</legend><input id="tel" onblur="valTel()" type="tel" class="myform_input" placeholder="Телефон" required></fieldset>
+                        <div id="tel-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Одежда</legend>
+                            <select id="clothes" onblur="valClothes()" class="myform_select" required>
+                                <option class="select_option" selected>Я хочу</option>
+                                <option value="1" class="select_option">Футболка</option>
+                                <option value="2" class="select_option">Кофта</option>
+                                <option value="3" class="select_option">Джинсы</option>
+                                <option value="4" class="select_option">Кроссовки</option>
+                            </select>
+                        </fieldset>
+                        <div id="clothes-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Размер</legend>
+                            <select id="size" onblur="valSize()" class="myform_select" required>
+                                <option class="select_option" selected>Мой размер</option>
+                                <option value="1" class="select_option">S</option>
+                                <option value="2" class="select_option">M</option>
+                                <option value="3" class="select_option">L</option>
+                            </select>
+                        </fieldset>
+                        <div id="size-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Количество</legend><input id="quantity" onblur="valQuantity()" type="number" min="1" max="3" class="myform_input" placeholder="Количество" required></fieldset>
+                        <div id="quantity-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Адрес</legend><input id="dest" onblur="valDest()" type="text" class="myform_input" placeholder="Адрес" required></fieldset>
+                        <div id="dest-val" class="error-val"></div>
+                    </div>
+                    <div class="myform__input_group">
+                        <fieldset><legend>Оплата</legend>
+                            <select id="payment" onblur="valPayment()" class="myform_select" required>
+                                <option class="select_option" selected>Выбираю</option>
+                                <option value="1" class="select_option">Наличные</option>
+                                <option value="2" class="select_option">По карте</option>
+                                <option value="3" class="select_option">Биткоины</option>
+                            </select>
+                        </fieldset>
+                        <div id="payment-val" class="error-val"></div>
+                    </div>
+                    <div class="myform_button__wrapper">
+                        <span class="myform_button" onclick="displaySummary()">Заказать!</span>
+                    </div>
+                </form>
+
+            </div>
+
+            <div id="myform_summary" class="myform_summary">
+                <div class="summary_title">Итог</div>
+                <div id="summary" class="summary_content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="formcall">
+        <div class="page-container">
+            <div class="formcall_title">Форма заказа обратного звонка</div>
+            <form action="#" class="formcall_form">
+                <input type="text" class="form_input" maxlength="32" pattern="[A-Za-z ]{1,32}" title="Имя должно содержать буквы и быть не короче 2 символов и не длиннее 32!"  placeholder="Имя" required>
+                <input type="email" class="form_input" placeholder="Введите свой E-mail" required>
+                <input type="tel" class="form_input" pattern="[7][0-9]{10}" title="Номер должен начинаться с 7. 11 цифр. Без плюса, скобок и пробелов!" placeholder="Телефон" required>
+                <input type="text" class="form_input" placeholder="Какая тема вас интересует?" required>
+                <button class="form_button">Отправить вопрос!</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="page-container">
+            <div class="footer_copyright">
+                &copy; Все на этом сайте запрещено
+            </div>
+        </div>
+    </section>
+
+    <section class="xxxxx">
+        
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+</html>
